@@ -1,8 +1,12 @@
 const mongoose = require('mongoose')
 
+const dotenv = require('dotenv');
 
+dotenv.config();
 
-mongoose.connect("mongodb+srv://Athif:fgmRqkRJk88h3drI@cluster0.ktjqylo.mongodb.net/BookStore?retryWrites=true&w=majority")
+const url=process.env.MONGODB__URL;
+
+mongoose.connect(url)
 .then(()=> console.log("Connected To Database"))
 .catch((err)=> console.log(err))
 
