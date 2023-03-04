@@ -5,7 +5,7 @@ const router = require('./routes/book-routes')
 const cors = require('cors')
 
 
-// Middlewares 
+//Middlewars
 
 app.use(express.json())
 
