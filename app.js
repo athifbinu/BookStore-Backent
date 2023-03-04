@@ -13,6 +13,10 @@ app.use(cors())
 
 app.use("/books",router) // localhost:5000/books
 
+app.get('/',(req,res)=>{
+    res.json("backent success")
+})
+
 
 app.listen(5000, ()=> {
     console.log("server started port 5000")
